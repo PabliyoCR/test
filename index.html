@@ -36,7 +36,7 @@
         respuestaCorrecta.innerHTML = filtro.length + ">1"
       } else if (filtro.length == 1) {
         respuestaCorrecta.innerHTML = filtro[0]
-        gsap.set(window, { scrollTo: ".correct-answer-box" })
+        gsap.to(window, { duration: 1, scrollTo: ".correct-answer-box" })
       } else {
         respuestaCorrecta.innerHTML = "0"
       }
