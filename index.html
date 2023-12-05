@@ -52,6 +52,12 @@
         }
         setTimeout(() => (timesCtrlClicked = 0), 200)
       }
+      if (event.key === "ArrowUp") {
+        gsap.to(window, { scrollTo: { y: "-=30" } })
+      }
+      if (event.key === "ArrowDown") {
+        gsap.to(window, { scrollTo: { y: "+=30" } })
+      }
     }
 
     let timesCtrlClicked = 0

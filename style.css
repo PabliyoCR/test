@@ -23,6 +23,10 @@
   font-size: 23px;
 }
 
+.voting-summary {
+  background-color: rgb(234, 234, 172);
+}
+
 img {
   display: block;
   width: 30%;
