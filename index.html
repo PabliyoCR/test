@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="data.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <input id="buscador" type="text" />
+    </div>
+    <div id="respuestaCorrecta"></div>
+  </body>
+
+  <script>
+    items = items.map(element => element.toLowerCase())
+    let respuestaCorrecta = document.getElementById("respuestaCorrecta")
+    let buscador = document.getElementById("buscador")
+    buscador.addEventListener("keyup", e => {
+      let str = e.target.value
+      let filtro = items.filter(element => element.includes(str))
+      console.log()
+      if (filtro.length > 1) {
+        respuestaCorrecta.innerHTML = filtro.length + ">1"
+      } else if (filtro.length == 1) {
+        respuestaCorrecta.innerHTML = filtro[0]
+      } else {
+        respuestaCorrecta.innerHTML = "0"
+      }
+    })
+
+    function doubleControlEvent() {
+      if (event.key === "Control") {
+        timesCtrlClicked++
+        if (timesCtrlClicked >= 2) {
+          console.log("reset")
+          buscador.value = ""
+          buscador.focus()
+        }
+        setTimeout(() => (timesCtrlClicked = 0), 200)
+      }
+    }
+
+    let timesCtrlClicked = 0
+    document.addEventListener("keyup", doubleControlEvent, true)
+  </script>
+</html>

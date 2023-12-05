@@ -1,0 +1,20 @@
+* {
+  font-size: 18px;
+}
+
+#buscador {
+  width: 100%;
+  font-size: 28px;
+}
+
+#respuestaCorrecta {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  font-size: 28px;
+}
+
+.correct-answer-box > * {
+  background-color: rgb(230, 230, 133);
+  font-size: 35px;
+}
