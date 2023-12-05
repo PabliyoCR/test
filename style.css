@@ -19,6 +19,11 @@
 }
 
 .correct-answer-box > * {
-  background-color: rgb(230, 230, 133);
-  font-size: 35px;
+  background-color: rgb(234, 234, 172);
+  font-size: 23px;
+}
+
+img {
+  display: block;
+  width: 30%;
 }
