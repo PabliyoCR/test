@@ -8,10 +8,14 @@
 }
 
 #respuestaCorrecta {
-  display: flex;
   justify-content: center;
   margin-top: 30px;
   font-size: 28px;
+  width: 100%;
+}
+
+.correct-answer image {
+  width: 100%;
 }
 
 .correct-answer-box > * {

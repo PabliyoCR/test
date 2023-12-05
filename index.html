@@ -6,12 +6,20 @@
     <title>Document</title>
     <script src="data.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .container {
+        max-width: 1600px;
+        margin: 0 auto;
+      }
+    </style>
   </head>
   <body>
-    <div>
-      <input id="buscador" type="text" />
+    <div class="container">
+      <div id="respuestaCorrecta"></div>
+      <div>
+        <input id="buscador" type="text" />
+      </div>
     </div>
-    <div id="respuestaCorrecta"></div>
   </body>
 
   <script>
